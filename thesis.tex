@@ -1,0 +1,87 @@
+%% thesis.tex
+%% Copyright 2021-2022 Tom M. Ragonneau
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Tom M. Ragonneau.
+\documentclass[initial,draft]{polyu-thesis}
+\usepackage[final]{microtype}
+\usepackage{nameref}
+
+% List of hyphenation exceptions for US English
+% Source: https://ctan.org/tex-archive/info/digests/tugboat/hyphenex
+\input{ushyphex}
+
+% Bibliographical resources
+\addbibresource{example.bib}
+
+% Thesis metadata
+\title{Title}
+\author{Author}
+\DTMsavedate{ini}{2022-08-25}  % date of creation
+\DTMsavedate{rev}{2022-08-25}  % date of revision
+\date{\DTMusedate{ini}}
+\newcommand{\degree}{Doctor of Philosophy}
+\newcommand{\university}{The Hong Kong Polytechnic University}
+\newcommand{\department}{Department of Applied Mathematics}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\include{utils/certificate}
+
+\include{content/dedication}
+\include{content/abstract}
+\include{content/acknowledgments}
+
+\cleardoublepage
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+\cleardoublepage
+\listoftables
+
+\cleardoublepage
+\listofalgorithms
+
+\cleardoublepage
+\lstlistoflistings
+
+\cleardoublepage
+\glsfindwidesttoplevelname
+\printglossary[type=\acronymtype]
+
+\cleardoublepage
+\include{utils/nomenclature}
+
+\ifdraft{%
+    \cleardoublepage%
+    \listoftodos%
+}{}
+
+\mainmatter
+
+\include{content/introduction}
+\include{content/conclusion}
+
+\appendix
+
+\cleardoublepage
+\printbibliography[heading=bibintoc]
+
+\include{utils/index}
+
+\end{document}

@@ -1,0 +1,34 @@
+%% utils/titlepage.tex
+%% Copyright 2021-2022 Tom M. Ragonneau
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Tom M. Ragonneau.
+\begin{titlepage}
+    \centering
+    {\large\university\par}
+    \vspace{0.5em}
+    {\large\department\par}
+    \vfill
+    {\parbox[b]{0.8\textwidth}{\centering\LARGE\textsc{\thetitle}}\par}
+    \vspace{4em}
+    {\Large\textsc{\theauthor}\par}
+    \vfill
+    {\large\itshape%
+        A thesis submitted in partial fulfilment\par%
+        of the requirements for the degree of\par%
+        \degree%
+    }
+    \vfill
+    \makeatletter
+    {\large\DTMenglishmonthname{\@dtm@ini@month}, \@dtm@ini@year}
+    \makeatother
+\end{titlepage}
